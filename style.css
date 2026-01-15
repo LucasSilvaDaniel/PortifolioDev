@@ -1,0 +1,307 @@
+/*
+    ============================
+    1. Variáveis & Reset
+    ============================
+*/
+
+:root {
+    /* Cores - Modo Claro Padrão (Glassmorphic base) */
+    --clr-main-bg: #e0e5ec; /* Fundo suave */
+    --clr-text-main: #333;
+    --clr-primary: #007bff; /* Azul vibrante */
+    --clr-primary-dark: #0056b3;
+    --clr-neumorphic-light: #ffffff; /* Sombra clara (simula luz) */
+    --clr-neumorphic-dark: #a3b1c6; /* Sombra escura (simula sombra) */
+    --clr-glass-border: rgba(255, 255, 255, 0.4); /* Borda do efeito vidro */
+    --clr-glass-shadow: rgba(0, 0, 0, 0.05);
+
+    /* Tipografia */
+    --ff-main: 'Montserrat', sans-serif;
+    --transition: 0.4s ease-in-out;
+}
+
+/* Modo Escuro (Dark Mode) */
+body.dark-mode {
+    --clr-main-bg: #1e2730;
+    --clr-text-main: #e0e5ec;
+    --clr-primary: #3498db;
+    --clr-primary-dark: #2980b9;
+    --clr-neumorphic-light: #2c3e50;
+    --clr-neumorphic-dark: #161e25;
+    --clr-glass-border: rgba(255, 255, 255, 0.1);
+    --clr-glass-shadow: rgba(0, 0, 0, 0.4);
+}
+
+/* Reset Base */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+    font-family: var(--ff-main);
+    background-color: var(--clr-main-bg);
+    color: var(--clr-text-main);
+    line-height: 1.6;
+    transition: background-color var(--transition), color var(--transition);
+}
+a { color: var(--clr-primary); text-decoration: none; transition: color var(--transition); }
+a:hover { color: var(--clr-primary-dark); }
+.container { width: 90%; max-width: 1300px; margin: 0 auto; }
+.section { padding: 100px 0; }
+.section-dark { background-color: var(--clr-neumorphic-light); }
+
+.section-title, .section-title-left {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 60px;
+    color: var(--clr-primary);
+    text-shadow: 1px 1px 1px var(--clr-glass-shadow);
+}
+.section-title { text-align: center; }
+.section-title-left { text-align: left; }
+
+/*
+    ============================
+    2. Neumorphic Buttons & Styling
+    ============================
+*/
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all var(--transition);
+    /* Neumorphic Shadow */
+    box-shadow: 6px 6px 12px var(--clr-neumorphic-dark), -6px -6px 12px var(--clr-neumorphic-light);
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--clr-primary);
+    color: var(--clr-neumorphic-light);
+}
+
+.btn-primary:hover {
+    background-color: var(--clr-primary-dark);
+    /* Inset shadow on hover */
+    box-shadow: inset 2px 2px 5px var(--clr-neumorphic-dark), inset -3px -3px 7px var(--clr-neumorphic-light);
+    transform: scale(0.98);
+}
+
+.btn-secondary {
+    background-color: var(--clr-main-bg);
+    color: var(--clr-text-main);
+    margin-left: 15px;
+}
+
+.btn-secondary:hover {
+    /* Inset shadow on hover */
+    box-shadow: inset 4px 4px 8px var(--clr-neumorphic-dark), inset -4px -4px 8px var(--clr-neumorphic-light);
+    transform: scale(0.98);
+}
+
+.btn-mode, .btn-lang {
+    font-size: 1.2rem;
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 50%;
+    /* Neumorphic Circle */
+    box-shadow: 3px 3px 6px var(--clr-neumorphic-dark), -3px -3px 6px var(--clr-neumorphic-light);
+    background-color: var(--clr-main-bg);
+    color: var(--clr-text-main);
+    border: none;
+    transition: all var(--transition);
+}
+
+.btn-mode:hover, .btn-lang:hover {
+    box-shadow: inset 2px 2px 4px var(--clr-neumorphic-dark), inset -2px -2px 4px var(--clr-neumorphic-light);
+}
+
+/*
+    ============================
+    3. Header & Hero
+    ============================
+*/
+
+.main-header {
+    background-color: var(--clr-main-bg);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px var(--clr-glass-shadow);
+}
+.nav-content { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; }
+.logo { font-size: 1.8rem; font-weight: 700; color: var(--clr-primary); }
+
+/* HERO */
+.hero { display: flex; align-items: center; min-height: 90vh; }
+.hero-grid { display: grid; grid-template-columns: 3fr 2fr; gap: 80px; align-items: center; text-align: left; }
+.tagline { color: var(--clr-primary); font-weight: 600; margin-bottom: 5px; }
+.hero-intro h1 { font-size: 3.5rem; margin-bottom: 5px; }
+.subtitle { font-size: 1.5rem; font-weight: 400; color: var(--clr-text-main); opacity: 0.8; margin-bottom: 30px; }
+
+/* Foto de Perfil (Substituição do Glass Card) */
+.profile-image-container {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Efeito Neumorphic para a moldura */
+    box-shadow: 10px 10px 20px var(--clr-neumorphic-dark), -10px -10px 20px var(--clr-neumorphic-light);
+    transition: all var(--transition);
+}
+
+.profile-image-container:hover {
+    /* Efeito sutil de 'pressionar' ou 'flutuar' */
+    box-shadow: inset 5px 5px 10px var(--clr-neumorphic-dark), inset -5px -5px 10px var(--clr-neumorphic-light);
+    transform: scale(0.98);
+}
+
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+}
+
+
+/*
+    ============================
+    4. Projects (Neumorphic Cards)
+    ============================
+*/
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+}
+
+.project-card {
+    background-color: var(--clr-main-bg);
+    border-radius: 16px;
+    padding-bottom: 20px;
+    box-shadow: 8px 8px 16px var(--clr-neumorphic-dark), -8px -8px 16px var(--clr-neumorphic-light);
+    transition: transform var(--transition), box-shadow var(--transition);
+    overflow: hidden;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    /* Inset shadow on hover */
+    box-shadow: inset 4px 4px 8px var(--clr-neumorphic-dark), inset -4px -4px 8px var(--clr-neumorphic-light);
+}
+
+.project-card img { width: 100%; height: 200px; object-fit: cover; display: block; }
+.project-info { padding: 20px 25px; }
+.project-info h3 { font-size: 1.4rem; margin-bottom: 5px; color: var(--clr-primary); }
+.tech-stack { font-size: 0.85rem; color: var(--clr-text-main); opacity: 0.7; margin-bottom: 10px; }
+.project-links { padding: 0 25px; }
+.project-links a { margin-right: 15px; font-weight: 600; }
+
+/*
+    ============================
+    5. About & Skills
+    ============================
+*/
+.about-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 60px; text-align: left; }
+.about-text p { margin-bottom: 15px; }
+
+.skills-box {
+    background-color: var(--clr-main-bg);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 5px 5px 10px var(--clr-neumorphic-dark), -5px -5px 10px var(--clr-neumorphic-light);
+}
+.skills-box h3 { font-size: 1.3rem; margin-bottom: 20px; color: var(--clr-primary); }
+.skills-list { display: flex; flex-wrap: wrap; gap: 10px; }
+.skill-tag {
+    background-color: var(--clr-main-bg);
+    color: var(--clr-text-main);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    /* Mini-neumorphic tag */
+    box-shadow: 2px 2px 4px var(--clr-neumorphic-dark), -2px -2px 4px var(--clr-neumorphic-light);
+}
+
+/*
+    ============================
+    6. Contact & Footer
+    ============================
+*/
+
+.contact-subtext { margin-bottom: 30px; }
+.contact-form { max-width: 600px; margin: 0 auto; text-align: center; }
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--clr-main-bg);
+    color: var(--clr-text-main);
+    /* Inset shadow for input fields */
+    box-shadow: inset 2px 2px 5px var(--clr-neumorphic-dark), inset -3px -3px 7px var(--clr-neumorphic-light);
+    transition: box-shadow var(--transition);
+}
+.contact-form input:focus, .contact-form textarea:focus {
+    box-shadow: inset 1px 1px 2px var(--clr-primary-dark), inset -1px -1px 2px var(--clr-primary);
+    outline: none;
+}
+
+footer {
+    background-color: var(--clr-main-bg);
+    padding: 20px 0;
+    border-top: 1px solid var(--clr-neumorphic-dark);
+}
+.footer-content { display: flex; justify-content: space-between; align-items: center; font-size: 0.9rem; }
+.social-links a { font-size: 1.4rem; margin-left: 20px; color: var(--clr-text-main); }
+.social-links a:hover { color: var(--clr-primary); }
+
+/*
+    ============================
+    7. Scroll Reveal & Responsiveness
+    ============================
+*/
+
+/* Scroll Reveal Base */
+.reveal, .reveal-left, .reveal-right, .reveal-slide-up, .reveal-fade-in {
+    opacity: 0;
+    transition: opacity 0.8s var(--transition), transform 0.8s var(--transition);
+}
+.reveal { transform: translateY(30px); }
+.reveal-slide-up { transform: translateY(50px); }
+.reveal-left { transform: translateX(-50px); }
+.reveal-right { transform: translateX(50px); }
+.reveal-fade-in { opacity: 0; }
+
+.reveal.active, .reveal-left.active, .reveal-right.active, .reveal-slide-up.active, .reveal-fade-in.active {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+@media (max-width: 1024px) {
+    .hero-grid, .about-grid { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+    .hero-intro { order: 2; }
+    .hero-visual { order: 1; }
+    
+    .profile-image-container {
+        width: 250px;
+        height: 250px;
+        margin-bottom: 30px; 
+    }
+    
+    .hero-actions { display: flex; flex-direction: column; gap: 15px; }
+    .btn-secondary { margin-left: 0; }
+    .section-title-left { text-align: center; }
+    .footer-content { flex-direction: column; gap: 10px; }
+}

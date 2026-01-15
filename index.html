@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucas Silva | Back-End Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="LS_Icon.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="container nav-content">
+            <a href="#home" class="logo" data-en="LS" data-pt="LS">LS</a>
+            <nav class="desktop-nav">
+                <a href="#about" data-en="About" data-pt="Sobre">About</a>
+                <a href="#projects" data-en="Projects" data-pt="Projetos">Projects</a>
+                <a href="#contact" data-en="Contact" data-pt="Contato">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <button id="lang-toggle" class="btn-lang" data-current-lang="en">
+                    <span data-en="PT" data-pt="EN">PT</span>
+                </button>
+                <button id="dark-mode-toggle" class="btn-mode"><i class="fas fa-moon"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero section">
+            <div class="container hero-grid">
+                <div class="hero-intro reveal-fade-in">
+                    <p class="tagline" data-en="Hello, I'm" data-pt="Olá, Eu sou">Hello, I'm</p>
+                    <h1>
+                        < Lucas Silva />
+                    </h1>
+                    <h2 class="subtitle" data-en="Back-End Developer" data-pt="Desenvolvedor Back-End">Back-End
+                        Developer </h2>
+                    <p class="description" data-en="Focused on back-end development, I build systems using JavaScript (Node.js),
+                        Python, and Java fundamentals. Other skills that contribute to my experience 
+                        include handling JSON data and Git. In addition to FSM and FSM Cloud technologies." data-pt="Focado em desenvolvimento Back-end, construo sistemas utilizando JavaScript (Node.js),
+                        Python e fundamentos em Java. Outras habilidades que atribuem a minha experiência são o manuseio
+                        de dados JSON e Git. Além das tecnologias do FSM e FSM Cloud.">
+                        Focado em desenvolvimento Back-end, construo sistemas utilizando JavaScript (Node.js),
+                        Python e fundamentos em Java. Outras habilidades que atribuem a minha experiência são o manuseio
+                        de dados JSON
+                        e Git. Além do manuseio das tecnologias do FSM e FSM Cloud.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="Curriculo_Lucas_da_Silva_Daniel.pdf" download class="btn btn-primary" data-en="Download CV"
+                            data-pt="Baixar Currículo">Download CV</a>
+                        <a href="#contact" class="btn btn-secondary" data-en="Get in Touch" data-pt="Fale Comigo">Get in
+                            Touch</a>
+                    </div>
+                </div>
+                <div class="hero-visual reveal-slide-up">
+                    <div class="profile-image-container">
+                        <img src="Me.png" alt="Sua Foto de Perfil" class="profile-photo">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section section-dark">
+            <div class="container">
+                <h2 class="section-title" data-en="Featured Projects" data-pt="Projetos em Destaque">Featured Projects
+                </h2>
+                <div class="projects-grid">
+                    <div class="project-card reveal">
+                        <img src="PaisagemRcPromotora.png" alt="Rc Promotora de Crédito">
+                        <div class="project-info">
+                            <h3 data-en="Landing Page Rc Promotora" data-pt="Landing Page Rc Promotora">Rc Promotora
+                            </h3>
+                            <p class="tech-stack">JavaScript</p>
+                            <p data-en="A magnificent landing page envisioned by the client, and I was able to turn that dream into reality."
+                                data-pt="Uma Landing Page magnífica imaginada pelo cliente que pude tornar esse sonho realidade.">
+                                A magnificent landing page envisioned by the client, and I was able to turn that dream
+                                into reality. </p>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/LucasSilvaDaniel/RcPromotora" target="_blank"><i
+                                    class="fab fa-github"></i> GitHub</a>
+                            <a href="https://www.rcpromotora.com.br/" target="_blank"><i class="fas fa-link"></i> Rc
+                                Promotora</a>
+                        </div>
+                    </div>
+                    <div class="project-card reveal">
+                        <img src="PaisagemEcoMeta.png" alt="Eco Meta">
+                        <div class="project-info">
+                            <h3 data-en="Eco Meta" data-pt="Eco Meta">Eco Meta
+                            </h3>
+                            <p class="tech-stack">JavaScript</p>
+                            <p data-en="A simple local help platform where the community of Jardim das Palmeiras
+                             - São José SC can use and leave their questions, so that neighborhood leaders can 
+                             listen and assist the community. (Real Project)." data-pt="Uma plataforma de ajuda local simples, onde a comunidad edo Jarim das Palmeiras - São José SC
+                                pode estar utilizando e deixando suas dúvidas, para que os chefes de bairro pudessem ouvir e atender
+                                a comunidade. (Projeto Real).">
+                            </p>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/LucasSilvaDaniel/EcoMeta" target="_blank"><i
+                                    class="fab fa-github"></i> GitHub</a>
+                            <a href="https://eco-meta.vercel.app/" target="_blank"><i class="fas fa-link"></i> Eco
+                                Meta</a>
+                        </div>
+                    </div>
+                    <div class="project-card reveal">
+                        <img src="project_api.jpg" alt="Project 3 Thumbnail">
+                        <div class="project-info">
+                            <h3 data-en="Microservices API Gateway" data-pt="Gateway de API com Microsserviços">
+                                Microservices API Gateway</h3>
+                            <p class="tech-stack">GoLang, Docker, Kubernetes, gRPC</p>
+                            <p data-en="Engineered a secure, performant gateway handling millions of requests per day."
+                                data-pt="Projetei um gateway seguro e de alto desempenho que lida com milhões de requisições por dia.">
+                                Engineered a secure, performant gateway handling millions of requests per day.</p>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank"><i class="fas fa-link"></i> Live</a>
+                            <a href="#" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container about-grid">
+                <div class="about-text reveal-left">
+                    <h2 class="section-title-left" data-en="About Me" data-pt="Sobre Mim">About Me</h2>
+                    <p data-en="My core focus is centered on software architecture, driving robust development practices for the Back-end. I thrive in challenging environments, always pushing for innovative and scalable solutions. I am proficient in **JavaScript (Node.js)** and **Python**, with solid fundamentals in **Java**. While my specialization lies in complex server-side logic, I maintain a strong commitment to clean Front-end integration to ensure the delivery of a seamless and complete product."
+                        data-pt="Minha especialização é centrada na arquitetura de software, focando em práticas de desenvolvimento robustas para o Back-end. Eu prospero em ambientes desafiadores, sempre buscando soluções inovadoras e escaláveis. Sou proficiente em **JavaScript (Node.js)** e **Python**, com sólidos fundamentos em **Java**. Embora minha especialidade resida na lógica complexa do servidor, mantenho um forte compromisso com a integração limpa do Front-end para garantir a entrega de um produto final impecável.">
+                        Minha especialização é centrada na arquitetura de software, focando em práticas de
+                        desenvolvimento robustas para o Back-end. Eu prospero em ambientes desafiadores, sempre buscando
+                        soluções inovadoras e escaláveis. Sou proficiente em **JavaScript (Node.js)** e **Python**, com
+                        sólidos fundamentos em **Java**. Embora minha especialidade resida na lógica complexa do
+                        servidor, mantenho um forte compromisso com a integração limpa do Front-end para garantir a
+                        entrega de um produto final impecável.
+                    </p>
+                    <p data-en="Let's build something extraordinary." data-pt="Vamos construir algo extraordinário.">
+                        Let's build something extraordinary.
+                    </p>
+                </div>
+                <div class="skills-box reveal-right">
+                    <h3 data-en="Core Stack" data-pt="Stack Principal">Core Stack</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag">Back-end Architecture</span>
+                        <span class="skill-tag">JavaScript / Node.js</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">APIs RESTful / gRPC</span>
+                        <span class="skill-tag">Cloud (AWS/Azure)</span>
+                        <span class="skill-tag">Docker/K8s</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section section-dark">
+            <div class="container">
+                <h2 class="section-title" data-en="Get in Touch" data-pt="Entre em Contato">Get in Touch</h2>
+                <p data-en="Interested in hiring? Send me a direct message."
+                    data-pt="Interessado em contratar? Envie-me uma mensagem direta." class="contact-subtext">Interested
+                    in hiring? Send me a direct message.</p>
+                <form class="contact-form reveal" action="LINK_DO_FORMSPREE_OU_SIMILAR" method="POST">
+                    <input type="text" name="name" placeholder="Your Name" data-en-placeholder="Your Name"
+                        data-pt-placeholder="Seu Nome" required>
+                    <input type="email" name="_replyto" placeholder="Your Email" data-en-placeholder="Your Email"
+                        data-pt-placeholder="Seu Email" required>
+                    <textarea name="message" placeholder="Your Message..." data-en-placeholder="Your Message..."
+                        data-pt-placeholder="Sua Mensagem..." required></textarea>
+                    <button type="submit" class="btn btn-primary" data-en="Send Message" data-pt="Enviar Mensagem">Send
+                        Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2025 [John Doe]. All rights reserved.</p>
+            <div class="social-links">
+                <a href="LINK_GITHUB" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="LINK_LINKEDIN" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
