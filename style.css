@@ -305,3 +305,67 @@ footer {
     .section-title-left { text-align: center; }
     .footer-content { flex-direction: column; gap: 10px; }
 }
+
+/*
+============================
+Mini Projects - Logos Circulares (CORRETO)
+============================
+*/
+
+.mini-projects {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.mini-project {
+    text-align: center;
+}
+
+.mini-project img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+
+    /* ESSENCIAL PARA LOGOS */
+    object-fit: contain;
+    padding: 18px;
+
+    background-color: var(--clr-main-bg);
+
+    box-shadow:
+        6px 6px 14px rgba(0, 0, 0, 0.35),
+        -6px -6px 14px rgba(255, 255, 255, 0.05);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mini-project img:hover {
+    transform: translateY(-5px);
+    box-shadow:
+        10px 10px 22px rgba(0, 0, 0, 0.45),
+        -10px -10px 22px rgba(255, 255, 255, 0.08);
+}
+
+.mini-project p {
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--clr-text-main);
+}
+
+/*
+============================
+Responsivo
+============================
+*/
+
+@media (max-width: 768px) {
+    .mini-project img {
+        width: 100px;
+        height: 100px;
+        padding: 14px;
+    }
+}
